@@ -1,8 +1,8 @@
 # FILE NAME - phishing_email_detector.py
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION:  
+# NAME: Josh Fielding
+# DATE: 10/4/25
+# BRIEF DESCRIPTION: Write a program that analyzes an email subject line to detect phishing attempts based on common red flags
 
 
 
@@ -15,14 +15,23 @@
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
 
+# prompt user to enter an email subject line
+subject = input("Enter the email subject line: ")
 
+# check phishing indicators and output a warning message
+print("\nSECURITY ASSESSMENT:")
+if "urgent" in subject.lower() or "immediate action required" in subject.lower():
+    print("HIGH RISK: Possible phishing attempt.")
+elif "win" in subject.lower() or "free" in subject.lower():
+    print("MEDIUM RISK: Suspicious offer detected.")
+elif "password reset" in subject.lower():
+    print("LOW RISK: Verify legitimacy with sender.")
+else:
+    print("No phishing indicators detected.")
 
-
-
-
-
-
-
+# print subject thats been analyzed
+print("------------------------")
+print(f'Analyzed subject: "{subject}"')
 
 ########### END YER CODE ABOVE THIS LINE ###########
 
@@ -78,7 +87,7 @@ Analyzed subject: "Did you request a password reset?"
 
 1. Was using `in` difficult or was it natural?
 
-
+It was natural
 
 
 
@@ -98,7 +107,7 @@ Please gauge your utilization of AI on the following spectrum. Place an "X" in f
 of the appropriate response. Only choose one of the following:
 
 [ ] I did not use AI at all for this lab.
-[ ] I wrote the initial draft of the software but had AI help me make it better.
+[X] I wrote the initial draft of the software but had AI help me make it better.
 [ ] I fed the lab description to AI and had it generate a response but I modified it.
 [ ] AI created the entire program for me.
 
@@ -111,7 +120,7 @@ may impede your understanding. Please rate how well you understand the concepts 
 
 [ ] I understand very little about this lab.
 [ ] I am about 50/50 on this lab; I get parts of it but not the whole picture.
-[ ] I pretty much get it.
+[X] I pretty much get it.
 [ ] I'm solid. Totally got it.
 
 '''
